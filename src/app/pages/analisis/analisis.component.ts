@@ -87,7 +87,41 @@ export class AnalisisComponent {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            labels: {
+              color: '#000000',  // Texto blanco en la leyenda
+              font: {
+                size: 16  // Tamaño de fuente más grande
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#FFFFFF',  // Texto blanco en el eje X
+              font: {
+                size: 14  // Tamaño de fuente más grande
+              }
+            },
+            grid: {
+              color: 'rgba(255, 255, 255, 0.2)'  // Líneas de la grilla más suaves
+            }
+          },
+          y: {
+            ticks: {
+              color: '#000',  // Texto blanco en el eje Y
+              font: {
+                size: 14  // Tamaño de fuente más grande
+              }
+            },
+            grid: {
+              color: 'rgba(255, 255, 255, 0.2)'  // Líneas de la grilla más suaves
+            }
+          }
+        }
       }
     });
   }
@@ -107,10 +141,45 @@ export class AnalisisComponent {
       options: {
         indexAxis: 'y',
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            labels: {
+              color: '#FFFFFF',  // Texto blanco en la leyenda
+              font: {
+                size: 16  // Tamaño de fuente más grande
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#FFFFFF',  // Texto blanco en el eje X
+              font: {
+                size: 14  // Tamaño de fuente más grande
+              }
+            },
+            grid: {
+              color: 'rgba(255, 255, 255, 0.2)'  // Líneas de la grilla más suaves
+            }
+          },
+          y: {
+            ticks: {
+              color: '#000000',  // Texto blanco en el eje Y
+              font: {
+                size: 14  // Tamaño de fuente más grande
+              }
+            },
+            grid: {
+              color: 'rgba(255, 255, 255, 0.2)'  // Líneas de la grilla más suaves
+            }
+          }
+        }
       }
     });
   }
+
 
   seleccionCandidatos: string[] = [];
   seleccionFuentes: string[] = [];
