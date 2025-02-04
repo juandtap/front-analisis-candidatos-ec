@@ -49,41 +49,11 @@
     </div>
   </div>
 
-  <!-- Contenedor de gráficos -->
-<!--  -->
-<!--  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">-->
-<!--    &lt;!&ndash; Card 1: Top búsquedas en redes sociales &ndash;&gt;-->
-<!--    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow col-span-2">-->
-<!--      <h2 class="text-xl font-semibold text-gray-800">Top búsquedas en redes sociales (General)</h2>-->
-<!--      <canvas id="topBusquedaChart"></canvas>-->
-<!--    </div>-->
-
-
-
-<!--    &lt;!&ndash; Card 3 y 2 : Resumen nivel de aceptación candidatos &ndash;&gt;-->
-<!--    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow col-span-1">-->
-<!--      <h2 class="text-xl font-semibold text-gray-800">Resumen nivel de aceptación candidatos</h2>-->
-<!--      <canvas id="nivelAceptacionChart"></canvas>-->
-
-<!--      <br/>-->
-
-<!--      <h2 class="text-xl font-semibold text-gray-800">Top 3 Candidatos con mayor aceptación</h2>-->
-<!--      <ul class="mt-4">-->
-<!--        <li class="text-lg font-bold text-blue-700">Daniel Noboa - 45%</li>-->
-<!--        <li class="text-lg font-bold text-blue-500">Luisa Gonzales - 35%</li>-->
-<!--        <li class="text-lg font-bold text-blue-300">Andrea Gonzales - 15%</li>-->
-<!--      </ul>-->
-
-<!--    </div>-->
-
-
-
-<!--  </div>-->
  <br/>
   <!-- Contenedor principal para los cards grandes -->
   <div class="grid grid-cols-3 gap-6">
     <!-- Card 1: Ocupa dos columnas -->
-    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow col-span-2">
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow col-span-2 ">
       <h2 class="text-xl font-semibold text-gray-800">Top búsquedas en redes sociales (General)</h2>
       <canvas id="topBusquedaChart"></canvas>
     </div>
@@ -91,17 +61,45 @@
     <!-- Contenedor para los Cards 2 y 3 en una sola columna -->
     <div class="grid grid-rows-2 gap-6">
       <!-- Card 2 -->
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-        <h2 class="text-xl font-semibold text-gray-800">Top 3 Candidatos con mayor aceptación</h2>
+<!--      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">-->
+<!--        <h2 class="text-xl font-semibold text-gray-800">Top 3 Candidatos con mayor aceptación</h2>-->
+<!--        <ul class="mt-4">-->
+<!--          <li class="text-lg font-bold text-blue-700">Daniel Noboa - 45%</li>-->
+<!--          <li class="text-lg font-bold text-blue-500">Luisa Gonzales - 35%</li>-->
+<!--          <li class="text-lg font-bold text-blue-300">Andrea Gonzales - 15%</li>-->
+<!--        </ul>-->
+<!--      </div>-->
+
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow max-w-md ">
+        <h2 class="text-xl font-semibold text-gray-800">Top 4 Candidatos con mayor aceptación</h2>
         <ul class="mt-4">
-          <li class="text-lg font-bold text-blue-700">Daniel Noboa - 45%</li>
-          <li class="text-lg font-bold text-blue-500">Luisa Gonzales - 35%</li>
-          <li class="text-lg font-bold text-blue-300">Andrea Gonzales - 15%</li>
+          <li class="flex items-center space-x-3">
+            <img src="assets/images/candidatos/Daniel Noboa-modified.png" alt="Daniel Noboa"
+                 class="w-12 h-12 rounded-full object-cover">
+            <span class="text-lg font-bold text-blue-700">Daniel Noboa - 45% </span>
+          </li>
+
+          <li class="flex items-center space-x-3 mt-2">
+            <img src="assets/images/candidatos/Luisa González-modified.png" alt="Luisa González"
+                 class="w-12 h-12 rounded-full object-cover">
+            <span class="text-lg font-bold text-blue-500">Luisa González - 35%</span>
+          </li>
+          <li class="flex items-center space-x-3 mt-2">
+            <img src="assets/images/candidatos/Andrea González-modified.png" alt="Andrea González"
+                 class="w-12 h-12 rounded-full object-cover">
+            <span class="text-lg font-bold text-blue-300">Andrea González - 15%</span>
+          </li>
+
+          <li class="flex items-center space-x-3 mt-2">
+            <img src="assets/images/candidatos/Leonidas Iza-modified.png" alt="Andrea González"
+                 class="w-12 h-12 rounded-full object-cover">
+            <span class="text-lg font-bold text-blue-300">Leonidas Iza - 15%</span>
+          </li>
         </ul>
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow max-w-md">
         <h2 class="text-xl font-semibold text-gray-800">Resumen nivel de aceptación candidatos</h2>
         <canvas id="nivelAceptacionChart"></canvas>
       </div>
