@@ -1,19 +1,28 @@
-import {Component, HostListener} from '@angular/core';
+import {Component, HostListener, Injectable} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {CommonModule, NgClass} from '@angular/common';
 import { Chart, registerables } from 'chart.js';
 
+import {HttpClientModule} from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'  // 💡 Esto evitará que se instancie múltiples veces
+})
+
 @Component({
   selector: 'app-analisis',
+  standalone: true,
   imports: [
     FormsModule,
     NgClass,
     CommonModule,
+    HttpClientModule,
   ],
   templateUrl: './analisis.component.html',
   styleUrl: './analisis.component.css'
 })
 export class AnalisisComponent {
+
   candidatos: string[] = [
     'Daniel Noboa',
     'Luisa González',
@@ -61,7 +70,7 @@ export class AnalisisComponent {
     this.generarDatosRedes();
   }
 
-  generarDatosRedes() {
+    generarDatosRedes() {
     this.presenciaRedes = this.fuentes.map(fuente => ({
       fuente,
       porcentaje: Math.floor(Math.random() * 100) + 1
@@ -145,7 +154,7 @@ export class AnalisisComponent {
         plugins: {
           legend: {
             labels: {
-              color: '#FFFFFF',  // Texto blanco en la leyenda
+              color: '#000000',  // Texto blanco en la leyenda
               font: {
                 size: 16  // Tamaño de fuente más grande
               }
@@ -221,8 +230,5 @@ export class AnalisisComponent {
   }
 
 
-  comenzarAnalisis() {
-    console.log('Candidatos seleccionados:', this.seleccionCandidatos);
-    console.log('Fuentes seleccionadas:', this.seleccionFuentes);
-  }
+
 }
